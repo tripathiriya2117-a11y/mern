@@ -1,0 +1,19 @@
+
+let students = [
+    { name: "Riya", rollNo: 101, course: "BSc IT" },
+    { name: "Aman", rollNo: 102, course: "BSc IT" },
+    { name: "Priya", rollNo: 103, course: "BSc IT" }
+];
+
+function displayStudents() {
+    console.log("Student Details:");
+
+    for (let i = 0; i < students.length; i++) {
+        console.log("Name:", students[i].name);
+        console.log("Roll Number:", students[i].rollNo);
+        console.log("Course:", students[i].course);
+        console.log("--------------------");
+    }
+}
+
+displayStudents();
