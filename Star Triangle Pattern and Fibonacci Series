@@ -1,0 +1,29 @@
+
+let n = 5;
+
+// Part A: Star Triangle Pattern
+console.log("Star Triangle Pattern:");
+
+for (let i = 1; i <= n; i++) {
+    let pattern = "";
+
+    for (let j = 1; j <= i; j++) {
+        pattern += "* ";
+    }
+
+    console.log(pattern);
+}
+
+// Part B: Fibonacci Series
+console.log("\nFibonacci Series:");
+
+let first = 0;
+let second = 1;
+
+for (let i = 1; i <= n; i++) {
+    console.log(first);
+
+    let next = first + second;
+    first = second;
+    second = next;
+}
