@@ -1,0 +1,50 @@
+
+let books = [
+    { title: "Wings of Fire", author: "A. P. J. Abdul Kalam", available: true },
+    { title: "The Alchemist", author: "Paulo Coelho", available: false },
+    { title: "Rich Dad Poor Dad", author: "Robert Kiyosaki", available: true }
+];
+
+// Function to add a book
+function addBook(title, author, available) {
+    books.push({
+        title: title,
+        author: author,
+        available: available
+    });
+
+    console.log("Book added successfully.");
+}
+
+// Function to search for a book by title
+function searchBook(title) {
+    let book = books.find(
+        b => b.title.toLowerCase() === title.toLowerCase()
+    );
+
+    if (book) {
+        console.log("Book Found:", book.title);
+        console.log("Author:", book.author);
+        console.log("Available:", book.available);
+    } else {
+        console.log("Book not found.");
+    }
+}
+
+// Function to list available books
+function listAvailableBooks() {
+    console.log("\nAvailable Books:");
+
+    let availableBooks = books.filter(book => book.available === true);
+
+    availableBooks.forEach(book => {
+        console.log(book.title + " by " + book.author);
+    });
+}
+
+// Function calls
+addBook("Atomic Habits", "James Clear", true);
+
+searchBook("The Alchemist");
+
+listAvailableBooks();
