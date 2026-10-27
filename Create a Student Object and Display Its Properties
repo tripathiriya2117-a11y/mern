@@ -1,0 +1,15 @@
+
+let student = {
+    name: "Riya",
+    rollNo: 101,
+    course: "BSc IT",
+    semester: 5,
+    marks: 85
+};
+
+console.log("Student Details");
+console.log("Name:", student.name);
+console.log("Roll Number:", student.rollNo);
+console.log("Course:", student.course);
+console.log("Semester:", student.semester);
+console.log("Marks:", student.marks);
