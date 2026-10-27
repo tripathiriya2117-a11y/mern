@@ -1,0 +1,63 @@
+
+const express = require("express");
+const { MongoClient } = require("mongodb");
+
+const app = express();
+const PORT = 3000;
+
+// Middleware to read JSON request bodies
+app.use(express.json());
+
+// MongoDB connection
+const url = "mongodb://127.0.0.1:27017";
+const client = new MongoClient(url);
+
+let usersCollection;
+
+async function startServer() {
+    try {
+        await client.connect();
+
+        const db = client.db("UserDB");
+        usersCollection = db.collection("Users");
+
+        console.log("Connected to MongoDB");
+
+        // API to add user details
+        app.post("/api/users", async (req, res) => {
+            try {
+                const { name, email, age } = req.body;
+
+                if (!name || !email || age === undefined) {
+                    return res.status(400).json({
+                        message: "Name, email and age are required"
+                    });
+                }
+
+                const result = await usersCollection.insertOne({
+                    name,
+                    email,
+                    age: Number(age)
+                });
+
+                res.status(201).json({
+                    message: "User added successfully",
+                    userId: result.insertedId
+                });
+            } catch (error) {
+                res.status(500).json({
+                    message: "Failed to add user"
+                });
+            }
+        });
+
+        app.listen(PORT, () => {
+            console.log(`Server running at http://localhost:${PORT}`);
+        });
+    } catch (error) {
+        console.error("MongoDB connection failed:", error.message);
+        process.exit(1);
+    }
+}
+
+startServer();
