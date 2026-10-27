@@ -1,0 +1,13 @@
+
+let num = 5;
+let factorial = 1;
+
+function findFactorial(n) {
+    for (let i = 1; i <= n; i++) {
+        factorial = factorial * i;
+    }
+    return factorial;
+}
+
+console.log("Number:", num);
+console.log("Factorial:", findFactorial(num));
