@@ -1,0 +1,19 @@
+
+function calculateBill(units, rate = 5) {
+    let bill = 0;
+
+    if (units <= 100) {
+        bill = units * rate;
+    } else if (units <= 200) {
+        bill = (100 * rate) + ((units - 100) * 7);
+    } else {
+        bill = (100 * rate) + (100 * 7) + ((units - 200) * 10);
+    }
+
+    return bill;
+}
+
+// Three consumers
+console.log("Consumer 1 Bill:", calculateBill(80));
+console.log("Consumer 2 Bill:", calculateBill(150));
+console.log("Consumer 3 Bill:", calculateBill(250, 6));
