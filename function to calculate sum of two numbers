@@ -1,0 +1,13 @@
+
+let a = 10;
+let b = 20;
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+let result = sum(a, b);
+
+console.log("First number:", a);
+console.log("Second number:", b);
+console.log("Sum:", result);
