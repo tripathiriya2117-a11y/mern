@@ -1,0 +1,24 @@
+
+let students = [
+    { name: "Riya", marks: 85 },
+    { name: "Aman", marks: 90 },
+    { name: "Priya", marks: 78 }
+];
+
+function calculateTotal() {
+    let total = 0;
+
+    for (let i = 0; i < students.length; i++) {
+        total += students[i].marks;
+    }
+
+    return total;
+}
+
+console.log("Student Marks:");
+
+for (let i = 0; i < students.length; i++) {
+    console.log(students[i].name + ": " + students[i].marks);
+}
+
+console.log("Total Marks:", calculateTotal());
