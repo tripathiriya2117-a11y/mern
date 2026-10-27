@@ -1,0 +1,32 @@
+
+let products = ["Laptop", "Mobile", "Tablet", "Mouse", "Keyboard"];
+
+console.log("Original Products:", products);
+
+// Add a product at the end
+products.push("Monitor");
+console.log("After push():", products);
+
+// Remove the last product
+products.pop();
+console.log("After pop():", products);
+
+// Remove the first product
+products.shift();
+console.log("After shift():", products);
+
+// Add a product at the beginning
+products.unshift("Printer");
+console.log("After unshift():", products);
+
+// Create a book object
+let book = {
+    title: "Wings of Fire",
+    author: "A. P. J. Abdul Kalam",
+    price: 250
+};
+
+console.log("\nBook Details:");
+console.log("Title:", book.title);
+console.log("Author:", book.author);
+console.log("Price:", book.price);
