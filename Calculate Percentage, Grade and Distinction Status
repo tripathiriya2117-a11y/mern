@@ -1,0 +1,28 @@
+
+let marks = 85;
+let totalMarks = 100;
+
+let percentage = (marks / totalMarks) * 100;
+
+console.log("Marks:", marks);
+console.log("Percentage:", percentage + "%");
+
+// Grade calculation
+if (percentage >= 90) {
+    console.log("Grade: A");
+} else if (percentage >= 75) {
+    console.log("Grade: B");
+} else if (percentage >= 60) {
+    console.log("Grade: C");
+} else if (percentage >= 40) {
+    console.log("Grade: D");
+} else {
+    console.log("Grade: F");
+}
+
+// Comparison and logical operators
+if (percentage >= 75 && percentage <= 100) {
+    console.log("Distinction: Yes");
+} else {
+    console.log("Distinction: No");
+}
