@@ -1,0 +1,33 @@
+
+let movie = {
+    title: "3 Idiots",
+    director: "Rajkumar Hirani",
+    year: 2009,
+    rating: 8.4
+};
+
+// Display object keys
+console.log("Movie Keys:");
+console.log(Object.keys(movie));
+
+// Display object values
+console.log("Movie Values:");
+console.log(Object.values(movie));
+
+// Display object entries
+console.log("Movie Entries:");
+console.log(Object.entries(movie));
+
+// Merge two objects using spread operator
+let movieDetails = {
+    genre: "Comedy Drama",
+    language: "Hindi"
+};
+
+let completeMovie = {
+    ...movie,
+    ...movieDetails
+};
+
+console.log("Merged Movie Object:");
+console.log(completeMovie);
