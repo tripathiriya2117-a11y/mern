@@ -1,0 +1,15 @@
+
+let num = 12345;
+let reverse = 0;
+
+function reverseNumber(n) {
+    while (n > 0) {
+        let digit = n % 10;
+        reverse = reverse * 10 + digit;
+        n = Math.floor(n / 10);
+    }
+    return reverse;
+}
+
+console.log("Original Number:", num);
+console.log("Reversed Number:", reverseNumber(num));
