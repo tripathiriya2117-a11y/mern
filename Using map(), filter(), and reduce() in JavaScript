@@ -1,0 +1,14 @@
+
+let numbers = [1, 2, 3, 4, 5];
+
+// Using map() to square each number
+let squares = numbers.map(num => num * num);
+console.log("Squares:", squares);
+
+// Using filter() to find even numbers
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log("Even Numbers:", evenNumbers);
+
+// Using reduce() to calculate the sum
+let sum = numbers.reduce((total, num) => total + num, 0);
+console.log("Sum:", sum);
