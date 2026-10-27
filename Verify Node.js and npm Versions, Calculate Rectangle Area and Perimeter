@@ -1,0 +1,30 @@
+
+const { execSync } = require("child_process");
+
+// Display Node.js and npm versions
+console.log("Node.js Version:");
+
+try {
+    console.log(execSync("node --version").toString().trim());
+    console.log("npm Version:");
+    console.log(execSync("npm --version").toString().trim());
+} catch (error) {
+    console.log("Node.js or npm is not installed correctly.");
+}
+
+// Rectangle calculations
+let length = 10;
+let breadth = 5;
+
+function calculateArea(l, b) {
+    return l * b;
+}
+
+function calculatePerimeter(l, b) {
+    return 2 * (l + b);
+}
+
+console.log("Length:", length);
+console.log("Breadth:", breadth);
+console.log("Area:", calculateArea(length, breadth));
+console.log("Perimeter:", calculatePerimeter(length, breadth));
