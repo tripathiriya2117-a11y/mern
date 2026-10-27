@@ -1,0 +1,21 @@
+
+const express = require("express");
+
+const app = express();
+const PORT = 3000;
+
+// Sample data
+const students = [
+    { id: 1, name: "Riya", course: "BSc IT" },
+    { id: 2, name: "Aman", course: "BSc IT" },
+    { id: 3, name: "Priya", course: "BSc IT" }
+];
+
+// GET API to retrieve all students
+app.get("/api/students", (req, res) => {
+    res.json(students);
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
