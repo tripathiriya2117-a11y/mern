@@ -1,0 +1,19 @@
+
+const square = (n) => n * n;
+
+const cube = (n) => n * n * n;
+
+const checkEvenOdd = (n) => {
+    if (n % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+};
+
+let num = 4;
+
+console.log("Number:", num);
+console.log("Square:", square(num));
+console.log("Cube:", cube(num));
+console.log("Even or Odd:", checkEvenOdd(num));
